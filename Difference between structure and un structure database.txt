@@ -1,0 +1,63 @@
+Structured Data:
+
+
+Structured data is data that adheres to a pre-defined data model and is therefore straightforward to analyse. Structured data conforms to a tabular format with relationship between the different rows and columns. Common examples of structured data are Excel files or SQL databases. Each of these have structured rows and columns that can be sorted.
+
+Structured data depends on the existence of a data model – a model of how data can be stored, processed and accessed. Because of a data model, each field is discrete and can be accesses separately or jointly along with data from other fields. This makes structured data extremely powerful: it is possible to quickly aggregate data from various locations in the database.
+
+Structured data is is considered the most ‘traditional’ form of data storage, since the earliest versions of database management systems (DBMS) were able to store, process and access structured data.
+
+
+
+Unstructured Data:
+
+
+Unstructured data is information that either does not have a predefined data model or is not organised in a pre-defined manner. Unstructured information is typically text-heavy, but may contain data such as dates, numbers, and facts as well. This results in irregularities and ambiguities that make it difficult to understand using traditional programs as compared to data stored in structured databases. Common examples of unstructured data include audio, video files or No-SQL databases.
+
+The ability to store and process unstructured data has greatly grown in recent years, with many new technologies and tools coming to the market that are able to store specialised types of unstructured data. MongoDB, for example, is optimised to store documents. Apache Giraph, as an opposite example, is optimised for storing relationships between nodes.
+
+The ability to analyse unstructured data is especially relevant in the context of Big Data, since a large part of data in organisations is unstructured. Think about pictures, videos or PDF documents. The ability to extract value from unstructured data is one of main drivers behind the quick growth of Big Data.
+
+
+
+Semi-structured Data:
+
+
+Semi-structured data is a form of structured data that does not conform with the formal structure of data models associated with relational databases or other forms of data tables, but nonetheless contain tags or other markers to separate semantic elements and enforce hierarchies of records and fields within the data. Therefore, it is also known as self-describing structure. Examples of semi-structured data include JSON and XML are forms of semi-structured data.
+
+The reason that this third category exists (between structured and unstructured data) is because semi-structured data is considerably easier to analyse than unstructured data. Many Big Data solutions and tools have the ability to ‘read’ and process either JSON or XML. This reduces the complexity to analyse structured data, compared to unstructured data.
+
+
+
+Metadata – Data about Data:
+
+
+A last category of data type is metadata. From a technical point of view, this is not a separate data structure, but it is one of the most important elements for Big Data analysis and big data solutions. Metadata is data about data. It provides additional information about a specific set of data.
+
+In a set of photographs, for example, metadata could describe when and where the photos were taken. The metadata then provides fields for dates and locations which, by themselves, can be considered structured data. Because of this reason, metadata is frequently used by Big Data solutions for initial analysis.
+
+
+
+
+
+
+
+
+
+
+
+
+Structured Data	Unstructured Data
+
+Who	Self-service access	                       Requires data science expertise
+What	Only select data types         	               Many varied types conglomerated
+When	Schema-on-write	                               Schema-on-read
+Where	Commonly stored in data warehouses	       Commonly stored in data lakes
+How	Predefined format	                       Native format
+
+
+
+
+
+
+

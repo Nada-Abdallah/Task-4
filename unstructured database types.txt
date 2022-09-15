@@ -1,0 +1,14 @@
+Unstructured data just happens to be in greater abundance than structured data is. 
+Examples of unstructured data are: Rich media. Media and entertainment data, surveillance data, geo-spatial data, audio, weather data.
+
+
+
+
+
+Examples of unstructured data are:
+
+Rich media. Media and entertainment data, surveillance data, geo-spatial data, audio, weather data
+Document collections. Invoices, records, emails, productivity applications
+Internet of Things (IoT). Sensor data, ticker data
+Analytics. Machine learning, artificial intelligence (AI)
+Until the advent of object-based storage, most, if not all, of this unstructured data was stored in file-based systems.

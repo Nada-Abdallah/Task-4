@@ -1,0 +1,40 @@
+The original Harvard architecture computer, the Harvard Mark I, employed entirely separate memory systems to store instructions and data. 
+The CPU fetched the next instruction and loaded or stored data simultaneously and independently. 
+This is in contrast to a von Neumann architecture computer,in which both instructions and data are stored in the same memory system and (without the complexity of a CPU cache) must be accessed in turn.
+
+The physical separation of instruction and data memory is sometimes held to be the distinguishing feature of modern Harvard architecture computers. 
+With microcontrollers (entire computer systems integrated onto single chips), 
+the use of different memory technologies for instructions (e.g. flash memory) and data (typically read/write memory) in von Neumann machines is becoming popular. 
+The true distinction of a Harvard machine is that instruction and data memory occupy different address spaces. 
+In other words, a memory address does not uniquely identify a storage location (as it does in a von Neumann machine); it is also necessary to know the memory space (instruction or data) to which the address belongs.
+
+Von Neumann architecture
+Main article: Von Neumann architecture
+A computer with a von Neumann architecture has the advantage over pure Harvard machines in that code can also be accessed and treated the same as data, and vice versa. 
+This allows, for example, data to be read from disk storage into memory and then executed as code, or self-optimizing software systems using technologies such as just-in-time compilation to write machine code into their own memory and then later execute it. 
+
+Another example is self-modifying code, which allows a program to modify itself.
+
+A disadvantage of these methods are issues with executable space protection, which increase the risks from malware and software defects. 
+In addition, in these systems it is notoriously difficult to document code flow, and also can make debugging much more difficult.
+
+Modified Harvard architecture
+Accordingly, some pure Harvard machines are specialty products. 
+Most modern computers instead implement a modified Harvard architecture. 
+Those modifications are various ways to loosen the strict separation between code and data, while still supporting the higher performance concurrent data and instruction access of the Harvard architecture.
+
+Split-cache (or almost-von-Neumann) architecture
+The most common modification builds a memory hierarchy with separate CPU caches for instructions and data at lower levels of the hierarchy. There is a single address space for instructions and data, providing the von Neumann model, but the CPU fetches instructions from the instruction cache and fetches data from the data cache.[citation needed] Most programmers never need to be aware of the fact that the processor core implements a (modified) Harvard architecture, although they benefit from its speed advantages. Only programmers who generate and store instructions into memory need to be aware of issues such as cache coherency, if the store doesn't modify or invalidate a cached copy of the instruction in an instruction cache.
+
+Instruction-memory-as-data architecture
+Another change preserves the "separate address space" nature of a Harvard machine, but provides special machine operations to access the contents of the instruction memory as data. 
+Because data is not directly executable as instructions, such machines are not always viewed as "modified" Harvard architecture:
+
+Read access: initial data values can be copied from the instruction memory into the data memory when the program starts. 
+Or, if the data is not to be modified (it might be a constant value, such as pi, or a text string), it can be accessed by the running program directly from instruction memory without taking up space in data memory (which is often at a premium).
+Write access: a capability for reprogramming is generally required; few computers are purely ROM-based. For example, a microcontroller usually has operations to write to the flash memory used to hold its instructions.
+[1] This capability may be used for purposes including software updates. EEPROM/PROM replacement is an alternative method.
+Data-memory-as-instruction architecture
+A few Harvard architecture processors, such as the Maxim Integrated MAXQ, can execute instructions fetched from any memory segment – unlike the original Harvard processor, which can only execute instructions fetched from the program memory segment. 
+Such processors, like other Harvard architecture processors – and unlike pure von Neumann architecture – can read an instruction and read a data value simultaneously, if they're in separate memory segments, since the processor has (at least) two separate memory segments with independent data buses. 
+The most obvious programmer-visible difference between this kind of modified Harvard architecture and a pure von Neumann architecture is that – when executing an instruction from one memory segment – the same memory segment cannot be simultaneously accessed as data.
